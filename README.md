@@ -12,9 +12,15 @@ The dataset contains articles from the New York Times World section spanning 10 
 ## Computing anchor words
 
 ### Installing the requirements
-The repository contains code for anchor-based interactive topic modeling. The running environment is with python 2.7.x. You can install the requirements with 
+Here we show how to compute anchor words that will then be used for interaction. The running environment is python 2.7.x. The requirements can be installed with `pip`.
 
-```pip install -r requirements.txt```.
+```pip install -r requirements.txt```
 
-The following commands will generate anchor words using the implementation provided with this paper "A Practical Algorithm for Topic Modeling with Provable Guarantees". 
+```python uci_to_scipy.py data_uci/nytimes.txt <.mat>```
+
+```python truncate_vocabulary.py", paste0("../data_uci/",str_replace(dtm_txt_file,".txt",""),".mat"), paste0("../data_uci/vocab.",dtm_txt_file),trunc_thresh)```
+
+```python learn_topics.py",paste0("../data_uci/",str_replace(dtm_txt_file,".txt",""),".mat.trunc.mat"),"settings.example", paste0(" ../data_uci/vocab.",dtm_txt_file,".trunc"),num_topics,loss,"../py_code_output/result_")```
+
+
 
