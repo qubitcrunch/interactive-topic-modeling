@@ -1,4 +1,5 @@
 # Interactive Topic Modeling
+This repository contains the code for anchor word-based interactive topic modeling. Here we lay out the steps for running anchor words on the New York Times dataset.
 
 ## The New York times dataset
 The dataset contains articles from the New York Times World section spanning 10 years (2009 - 2018). The articles are in the `data/docs` directory. There is a `.jsonl` file for each year. Each line corresponds to an article and is a `.json` object that contains the following fields.
@@ -18,7 +19,7 @@ R -e 'install.packages(c("RJSONIO","tm","stringr"),repos="http://cran.us.r-proje
 to install the required packages. 
 
 ### Processing data
-The following will remove numbers, stops words, perform stemming, extract the vocabulary and convert the data in the sparse uci format in `data_uci`.
+The following will remove numbers, stops words, perform stemming, extract the vocabulary and convert the data in the sparse uci format. The output will be saved in a directory e.g. `data_uci`.
 
 ```
 mkdir data_uci
