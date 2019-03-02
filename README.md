@@ -9,9 +9,10 @@ The dataset contains articles from the New York Times World section spanning 10 
 * pageUrl
 
 ### Installing R and packages
-To process the data you will need R and some packages. To install R go here https://www.r-project.org. After R is installed run and you can successfully start it from a terminal run
+To process the data you will need R and some packages. To install R go here https://www.r-project.org. After R is installed make sure that you can successfully start it from a terminal and then run
 
-```R -e 'install.packages(c("RJSONIO","tm","stringr"),repos="http://cran.us.r-project.org")'
+```
+R -e 'install.packages(c("RJSONIO","tm","stringr"),repos="http://cran.us.r-project.org")'
 ```
 
 to install the required packages. 
