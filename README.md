@@ -8,6 +8,24 @@ The dataset contains articles from the New York Times World section spanning 10 
 * author
 * pageUrl
 
+### Processing
+To process the data you will need R and some packages. 
+
+```install R
+ install package_1
+ install package_2
+ install package_3
+```
+
+The following will remove numbers, stops words, perform stemming, will extract the vocabulary and will convert the data in the sparse uci format that is needed to run the anchor word algorithm.
+
+```Rscript json_to_uci.R nytimes data/docs data_uci```
+
+Some other useful commands
+
+```Rscript ```
+
+```Rscript ```
 
 ## Computing anchor words
 
