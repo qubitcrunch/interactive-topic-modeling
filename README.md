@@ -8,20 +8,23 @@ The dataset contains articles from the New York Times World section spanning 10 
 * author
 * pageUrl
 
-### Processing
-To process the data you will need R and some packages. 
+### Installing R and packages
+To process the data you will need R and some packages. To install R go here https://www.r-project.org. After R is installed run and you can successfully start it from a terminal run
 
-```install R
- install package_1
- install package_2
- install package_3
+```R -e 'install.packages(c("RJSONIO","tm","stringr"),repos="http://cran.us.r-project.org")'
 ```
 
-The following will remove numbers, stops words, perform stemming, will extract the vocabulary and will convert the data in the sparse uci format that is needed to run the anchor word algorithm.
+to install the required packages. 
 
-```Rscript json_to_uci.R nytimes data/docs data_uci```
+### Processing data
+The following will remove numbers, stops words, perform stemming, extract the vocabulary and convert the data in the sparse uci format in `data_uci`.
 
-Some other useful commands
+```
+mkdir data_uci
+Rscript json_to_uci.R nytimes data/docs data_uci
+```
+
+### Other useful commands
 
 ```Rscript ```
 
@@ -30,15 +33,15 @@ Some other useful commands
 ## Computing anchor words
 
 ### Installing the requirements
-Here we show how to compute anchor words that will then be used for interaction. The running environment is python 2.7.x. The requirements can be installed with `pip`.
+To compute anchor words you will need python 2.7.x. The requirements can be installed with `pip`.
 
 ```pip install -r requirements.txt```
 
-```python uci_to_scipy.py data_uci/nytimes.txt <.mat>```
+The following will output the anchor words, the anchor word matrix and optionally, the recovered topic vectors in the `output` directory. 
 
-```python truncate_vocabulary.py", paste0("../data_uci/",str_replace(dtm_txt_file,".txt",""),".mat"), paste0("../data_uci/vocab.",dtm_txt_file),trunc_thresh)```
-
-```python learn_topics.py",paste0("../data_uci/",str_replace(dtm_txt_file,".txt",""),".mat.trunc.mat"),"settings.example", paste0(" ../data_uci/vocab.",dtm_txt_file,".trunc"),num_topics,loss,"../py_code_output/result_")```
-
+```
+mkdir output
+python main_anchor_words.py --threshold=10 --num_topics=500 --recovery=True
+```
 
 
