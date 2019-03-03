@@ -45,7 +45,7 @@ Running
 
 ```
 mkdir output
-python main_anchor_words.py --settings_file=settings --uci_file=data_uci/nytimes.txt --full_vocab_file=data_uci/vocab.nytimes.txt --cut_off=10 --stopwords_file=stopwords.txt --num_anchors=500 --recovery=False --out_file=output/output --save_trunc=True
+python main_anchor_words.py --settings_file=settings --uci_file=data_uci/nytimes.txt --full_vocab_file=data_uci/vocab.nytimes.txt --cut_off=5 --stopwords_file=stopwords.txt --num_anchors=500 --recovery=False --out_file=output/output --save_trunc=True
 ```
 
 will output 
