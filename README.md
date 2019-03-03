@@ -39,11 +39,19 @@ To compute anchor words you will need python 2.7.x. The requirements can be inst
 
 ```pip install -r requirements.txt```
 
-The following will output the anchor words, the anchor word matrix and optionally, the recovered topic vectors in the `output` directory. 
+The following will output 
+* the anchor words (.anchors)
+* the anchor word matrix (.Q_anchors)
+and optionally,
+* the truncated document-vocabulary matrix and truncated vocabulary (.M.trunc.mat,.vocab.trunc.mat)
+* the full word by word matrix (.Q)
+* The recovered topic vectors (.A), the matrix of topic word probabilities (.C) and topic likelihoods (.topic_likelihoods) 
+
+in the `output` directory. 
 
 ```
 mkdir output
-python main_anchor_words.py --threshold=10 --num_topics=500 --recovery=True
+python main_anchor_words.py --settings_file=settings --uci_file=data_uci/nytimes.txt --full_vocab_file=data_uci/vocab.nytimes.txt --cut_off=10 --stopwords_file=stopwords.txt --num_anchors=500 --recovery=False --out_file=output/output --save_trunc=True
 ```
 
 
