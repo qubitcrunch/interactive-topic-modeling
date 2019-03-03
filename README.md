@@ -40,12 +40,12 @@ To compute anchor words you will need python 2.7.x. The requirements can be inst
 ```pip install -r requirements.txt```
 
 The following will output 
-* the anchor words (.anchors)
-* the anchor word matrix (.Q_anchors)
+* the anchor words (`.anchors`)
+* the anchor word matrix (`.Q_anchors`)
 and optionally,
-* the truncated document-vocabulary matrix and truncated vocabulary (.M.trunc.mat,.vocab.trunc.mat)
-* the full word by word matrix (.Q)
-* The recovered topic vectors (.A), the matrix of topic word probabilities (.C) and topic likelihoods (.topic_likelihoods) 
+* the truncated document-vocabulary matrix and truncated vocabulary (`.M.trunc.mat`,`.vocab.trunc.mat`)
+* the full word by word matrix (`.Q`)
+* The recovered topic vectors (`.A`), the matrix of topic word probabilities (`.C`) and topic likelihoods (`.topic_likelihoods`) 
 
 in the `output` directory. 
 
