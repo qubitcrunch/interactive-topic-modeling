@@ -45,16 +45,16 @@ class Params:
 
 parser = ArgumentParser("Anchor word based topic modeling")
 parser.add_argument("--settings_file", required=True, help="A file containing various settings.")
-parser.add_argument("--uci_file", required=True, help="A file docs in uci format.")
+parser.add_argument("--uci_file", required=True, help="A file with the documents in uci format.")
 parser.add_argument("--full_vocab_file", required=True, help="A file with the full vocabulary.")
 parser.add_argument("--cut_off", required=True,type=int,help="Cutoff for the number of distinct documents that each word appears in.")
-parser.add_argument("--stopwords_file", required=True,help="A file containing stopwords")
+parser.add_argument("--stopwords_file", required=True,help="A file containing stopwords.")
 parser.add_argument("--num_anchors", required=True,type=int,help="The number of anchor words.")
 parser.add_argument("--recovery", required=True,type=lambda x: (str(x).lower() == 'true'),help="Boolean argument to perform recovery.")
-parser.add_argument("--loss", required=False,type=str,help="Optionally, the loss to be used in recovery. Default is L2.",default="L2")
+parser.add_argument("--loss", required=False,type=str,help="Optional, the loss to be used in recovery. Default is L2.",default="L2")
 parser.add_argument("--out_file", required=True,help="An output file string.")
-parser.add_argument("--save_trunc", required=False,type=lambda x: (str(x).lower() == 'true'),default=False,help="Boolean argument to save the truncated bow matrix vocab.")
-parser.add_argument("--save_Q", required=False,type=lambda x: (str(x).lower() == 'true'),default="False",help="Boolean argument to save the full Q (word by word) matrix.")
+parser.add_argument("--save_trunc", required=False,type=lambda x: (str(x).lower() == 'true'),default=False,help="Optional, a boolean argument to save the truncated bow matrix vocab.")
+parser.add_argument("--save_Q", required=False,type=lambda x: (str(x).lower() == 'true'),default="False",help="Optinal, a boolean argument to save the full Q (word by word) matrix.")
 
 
 args = parser.parse_args()
@@ -64,6 +64,7 @@ full_vocab = args.full_vocab_file
 cutoff = args.cut_off
 stopwords = args.stopwords_file
 K = args.num_anchors
+recovery =args.recovery
 loss = args.loss
 outfile = args.out_file
 savetrunc = args.save_trunc
