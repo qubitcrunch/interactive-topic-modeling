@@ -1,2 +1,7 @@
 interactive_tm_code/bin/
 interactive_tm_code/src/
+interactive_tm_code/data/
+interactive_tm_code/scripts/
+interactive_tm_code/output/
+interactive_tm_code/target/
+interactive_tm_code/tree/
