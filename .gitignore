@@ -3,5 +3,14 @@ interactive_tm_code/src/
 interactive_tm_code/data/
 interactive_tm_code/scripts/
 interactive_tm_code/output/
+interactive_tm_code/input/
+interactive_tm_code/__pycache__/
 interactive_tm_code/target/
 interactive_tm_code/tree/
+interactive_tm_code/*.R
+interactive_tm_code/*.pyc
+interactive_tm_code/*.sh
+interactive_tm_code/*.xml
+interactive_tm_code/*.pom
+interactive_tm_code/*.md
+interactive_tm_code/*.history
